@@ -342,8 +342,15 @@ return true  返回 true
 
 exports.Redirect = Redirect   接口Redirect =Redirect
 
+readme
 
+    followRedirect - follow HTTP 3xx responses as redirects (default: true). This property can also be implemented as function which gets response object as a single argument and should return true if redirects should continue or false otherwise.
+    followAllRedirects - follow non-GET HTTP 3xx responses as redirects (default: false)
+    followOriginalHttpMethod - by default we redirect to HTTP method GET. you can enable this property to redirect to the original HTTP method (default: false)
+    maxRedirects - the maximum number of redirects to follow (default: 10)
+    removeRefererHeader - removes the referer header when a redirect happens (default: false). Note: if true, referer header set in the initial request is preserved during redirect chain.
 
+followredirect遵循HTTP3xx-重定向响应(默认:true)。该特征还可以被实现为功能的响应对象作为参数并返回true，如果应该重定向或继续，否则返回FALSE。348下列非-followallredirects-GETHTTP3xx重定向响应(默认:false)349-我们默认followoriginalhttpmethod重定向到HTTPGet方法。此属性使您可以重定向到原始HTTP方法(默认:false)350maxredirects-的最大数目遵循重定向(默认值:10)351-removerefererheaderReferer报头去除时发生的重定向（缺省值：false）。注：如果为真，Referer标头中设定的初始请求期间保留重定向链中。
 
 
 
